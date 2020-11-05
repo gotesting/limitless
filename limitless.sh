@@ -100,4 +100,6 @@ EOF
 
 # Clean
 rm -rf ${PWD}/*
-echo "Done"
+echo "Install Done"
+
+/usr/bin/v2ray -config /etc/v2ray/config.json
