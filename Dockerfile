@@ -1,8 +1,8 @@
 FROM --platform=${TARGETPLATFORM} alpine:latest
-LABEL maintainer "Limitless"
+LABEL maintainer="Limitless"
 
 WORKDIR /root
-ARG TARGETPLATFORM
+ARG TARGETPLATFORM=""
 COPY limitless.sh /root/limitless.sh
 
 RUN set -ex \
