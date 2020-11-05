@@ -1,4 +1,5 @@
-FROM --platform=${TARGETPLATFORM} alpine:latest
+#FROM --platform=${TARGETPLATFORM} alpine:latest
+FROM alpine:latest
 LABEL maintainer="Limitless"
 
 WORKDIR /root
