@@ -67,6 +67,9 @@ mv geosite.dat geoip.dat /usr/local/share/v2ray/
 
 # mv config.json /etc/v2ray/config.json
 
+echo "Prepare to use $PORT"
+echo $PORT
+
 cat << EOF > /etc/v2ray/config.json
 {
     "inbounds": [
