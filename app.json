@@ -1,0 +1,14 @@
+{
+  "name": "Limitless Sample",
+  "description": "A Limitless app using Heroku",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["limitless", "heroku", "web"],
+  "stack": "container",
+  "env": {
+    "UUID": {
+      "description": "UUID",
+      "value": "252ad2df-8555-4e6f-a6af-15331d523499"
+    }
+  }
+}
