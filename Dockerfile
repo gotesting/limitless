@@ -17,6 +17,8 @@ RUN set -ex \
 	&& apk add --no-cache tzdata openssl ca-certificates \
     && python3 -m ensurepip \
     && pip3 install --no-cache --upgrade pip setuptools \
+    && rm /bin/sh \
+    && ln -s /bin/bash /bin/sh \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/* \
     && /bin/bash
@@ -31,8 +33,5 @@ RUN set -ex \
 	&& /root/install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
-
-# bash
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 CMD [ "/root/cmd.sh"]
