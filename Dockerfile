@@ -5,7 +5,7 @@ LABEL maintainer="Limitless"
 WORKDIR /root
 ARG TARGETPLATFORM=""
 COPY install.sh /root/install.sh
-COPY cmd.sh /root/cmd.sh
+#COPY cmd.sh /root/cmd.sh
 
 # install bash ip openssh python3
 RUN set -ex \
@@ -28,10 +28,10 @@ ADD ./.profile.d /app/.profile.d
 
 RUN set -ex \
 	&& mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray \
-	&& chmod +x /root/cmd.sh \
+#	&& chmod +x /root/cmd.sh \
 	&& chmod +x /root/install.sh \
 	&& /root/install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
-CMD [ "/root/cmd.sh"]
+CMD [ "/root/cmd.sh", ""]
