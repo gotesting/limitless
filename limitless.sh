@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Set ARG
 PLATFORM=$1

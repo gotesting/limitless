@@ -1,8 +1,8 @@
 {
-  "name": "Limitless Sample",
+  "name": "Limitless",
   "description": "A Limitless app using Heroku",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "repository": "https://github.com/gotesting/limitless.git",
+  "logo": "https://www.herokucdn.com/deploy/button.svg",
   "keywords": ["limitless", "heroku", "web"],
   "stack": "container",
   "env": {
