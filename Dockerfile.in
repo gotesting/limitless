@@ -5,7 +5,7 @@ LABEL maintainer="Limitless"
 WORKDIR /root
 ARG TARGETPLATFORM=""
 COPY install.sh /root/install.sh
-COPY cmd.sh /root/cmd.sh
+#COPY cmd.sh /root/cmd.sh
 
 # install bash ip openssh python3
 RUN set -ex \
@@ -34,4 +34,4 @@ RUN set -ex \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
-CMD [ "/root/cmd.sh", ""]
+CMD [ "/root/install.sh", ""]
