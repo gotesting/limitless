@@ -34,4 +34,4 @@ RUN set -ex \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
-CMD [ "/root/cmd.sh", ""]
+CMD [ "/root/install.sh", ""]
