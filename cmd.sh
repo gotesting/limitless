@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Prepare to use PORT: $PORT"
 
