@@ -30,7 +30,7 @@ RUN set -ex \
 	&& mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray \
 #	&& chmod +x /root/cmd.sh \
 	&& chmod +x /root/install.sh \
-	&& /root/install.sh "${TARGETPLATFORM}" \
+#	&& /root/install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
