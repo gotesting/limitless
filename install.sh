@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set ARG
 PLATFORM=$1
@@ -64,42 +64,8 @@ echo "Prepare to use"
 unzip v2ray.zip && chmod +x v2ray v2ctl
 mv v2ray v2ctl /usr/bin/
 mv geosite.dat geoip.dat /usr/local/share/v2ray/
-
-# mv config.json /etc/v2ray/config.json
-
-echo "Prepare to use $PORT"
-echo $PORT
-
-cat << EOF > /etc/v2ray/config.json
-{
-    "inbounds": [
-        {
-            "port": $PORT,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "$UUID",
-                        "alterId": 64
-                    }
-                ],
-                "disableInsecureEncryption": true
-            },
-            "streamSettings": {
-                "network": "ws"
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom"
-        }
-    ]
-}
-EOF
+#mv config.json /etc/v2ray/config.json
 
 # Clean
 rm -rf ${PWD}/*
-echo "Install Done"
-
-/usr/bin/v2ray -config /etc/v2ray/config.json
+echo "Done"
