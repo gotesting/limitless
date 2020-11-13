@@ -63,14 +63,8 @@ fi
 echo "Prepare to use"
 whoami
 unzip v2ray.zip && chmod +x v2ray v2ctl
-mv v2ray v2ctl /usr/bin/
-mv geosite.dat geoip.dat /usr/local/share/v2ray/
-# chmod 777
-chmod 777 /etc/v2ray /usr/local/share/v2ray /var/log/v2ray
-chmod 777 /usr/local/share/v2ray/*
-
-#mv config.json /etc/v2ray/config.json
 
 # Clean
-rm -rf ${PWD}/*
+rm -rf *.json
+
 echo "Done"

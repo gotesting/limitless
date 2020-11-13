@@ -4,7 +4,7 @@ echo "Prepare to use PORT: $PORT"
 
 whoami
 
-cat << EOF > /etc/v2ray/config.json
+cat << EOF > config.json
 {
     "inbounds": [
         {
@@ -35,4 +35,4 @@ echo "Config Done."
 
 whoami
 
-/usr/bin/v2ray -config /etc/v2ray/config.json
+./v2ray -config config.json
