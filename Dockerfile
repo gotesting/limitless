@@ -30,7 +30,6 @@ COPY embed-cmd.sh /limitless/embed-cmd.sh
 ADD ./.profile.d /app/.profile.d
 
 RUN set -ex \
-    && mkdir -p /limitless/v2ray \
     && chmod +x /limitless/embed-cmd.sh \
     && chmod +x /limitless/embed-install.sh \
     && /limitless/embed-install.sh "${TARGETPLATFORM}" \
