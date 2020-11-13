@@ -18,9 +18,6 @@ RUN set -ex \
     && rm -rf /var/cache/apk/* \
     && /bin/bash
 
-RUN adduser -D less
-USER less
-
 WORKDIR /limitless
 ARG TARGETPLATFORM=""
 COPY embed-install.sh /limitless/embed-install.sh
@@ -35,5 +32,8 @@ RUN set -ex \
     && /limitless/embed-install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
+
+RUN adduser -D less
+USER less
 
 CMD [ "/limitless/embed-cmd.sh", ""]
