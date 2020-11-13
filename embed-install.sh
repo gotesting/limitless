@@ -65,6 +65,6 @@ whoami
 unzip v2ray.zip && chmod +x v2ray v2ctl
 
 # Clean
-rm -rf *.json v2ray.zip systemd/
+rm -rf *.json v2ray.zip geosite.dat geoip.dat systemd/
 
 echo "Done"
