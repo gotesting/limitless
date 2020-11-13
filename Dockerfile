@@ -6,8 +6,7 @@ LABEL maintainer="Limitless"
 RUN set -ex \
 	&& apk add --update --no-cache tzdata openssl ca-certificates \
     && rm -rf /tmp/* \
-    && rm -rf /var/cache/apk/* \
-    && /bin/bash
+    && rm -rf /var/cache/apk/*
 
 WORKDIR /limitless
 ARG TARGETPLATFORM=""
