@@ -2,6 +2,13 @@
 FROM alpine:latest
 LABEL maintainer="Limitless"
 
+# install bash ip openssh python3
+RUN set -ex \
+	&& apk add --update --no-cache tzdata openssl ca-certificates \
+    && rm -rf /tmp/* \
+    && rm -rf /var/cache/apk/* \
+    && /bin/bash
+
 WORKDIR /limitless
 ARG TARGETPLATFORM=""
 COPY embed-install.sh /limitless/embed-install.sh
