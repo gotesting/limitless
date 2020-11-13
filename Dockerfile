@@ -28,8 +28,8 @@ ADD ./.profile.d /app/.profile.d
 
 RUN set -ex \
     && mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray \
-    && chmod +x /root/cmd.sh \
-    && chmod +x /root/install.sh \
+    && chmod +777 /root/cmd.sh \
+    && chmod +777 /root/install.sh \
     && /root/install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
