@@ -2,10 +2,10 @@
 FROM alpine:latest
 LABEL maintainer="Limitless"
 
-WORKDIR /root
+WORKDIR /limitless
 ARG TARGETPLATFORM=""
-COPY install.sh /root/install.sh
-COPY cmd.sh /root/cmd.sh
+COPY install.sh /limitless/install.sh
+COPY cmd.sh /limitless/cmd.sh
 
 # install bash ip openssh python3
 RUN set -ex \
@@ -28,11 +28,11 @@ ADD ./.profile.d /app/.profile.d
 
 RUN set -ex \
     && mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray \
-    && chmod 777 /root \
-    && chmod 777 /root/cmd.sh \
-    && chmod 777 /root/install.sh \
-    && /root/install.sh "${TARGETPLATFORM}" \
+    && chmod 777 /limitless \
+    && chmod 777 /limitless/cmd.sh \
+    && chmod 777 /limitless/install.sh \
+    && /limitless/install.sh "${TARGETPLATFORM}" \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
-CMD [ "/root/cmd.sh", ""]
+CMD [ "/limitless/cmd.sh", ""]
