@@ -61,7 +61,8 @@ fi
 
 # Prepare
 echo "Prepare to use"
-unzip v2ray.zip && chmod 777 v2ray v2ctl
+whoami
+unzip v2ray.zip && chmod +x v2ray v2ctl
 mv v2ray v2ctl /usr/bin/
 mv geosite.dat geoip.dat /usr/local/share/v2ray/
 # chmod 777
