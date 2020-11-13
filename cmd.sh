@@ -31,4 +31,6 @@ cat << EOF > /etc/v2ray/config.json
 EOF
 echo "Config Done."
 
+whoami
+
 /usr/bin/v2ray -config /etc/v2ray/config.json
