@@ -14,10 +14,9 @@ cat << EOF > config.json
                 "clients": [
                     {
                         "id": "$UUID",
-                        "alterId": 64
+                        "alterId": 0
                     }
-                ],
-                "disableInsecureEncryption": true
+                ]
             },
             "streamSettings": {
                 "network": "ws"
@@ -35,4 +34,4 @@ echo "Config Done."
 
 whoami
 
-./v2ray -config config.json
+./v2ray --config=./config.json
